@@ -6,12 +6,7 @@
     Date last modified: 4/10/2021
     Python Version: 3.8.10
 '''
-# Reading the file can be done in the following way also:
-#     >> import numpy as np
-#     >> np.loadtxt(filename, comments=["#" ,"*"], usecols=[0,1,2])
-# This creates a output array on the following format:
-#     >> [[<depth meter> , <Temperature Celsius>, <Salinity ___>],[...],...]
-# Another method would be through the use of seabird:
+
 
 # -- Imports --
 import pandas as pd
