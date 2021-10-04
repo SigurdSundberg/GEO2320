@@ -4,6 +4,9 @@
 *.txt
 *.csv
 *.cnv
+main.py
+geo2320_cruise_instructions.pdf
+.vscode
 
 # Exclude report specific files
 report.pdf
