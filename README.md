@@ -9,12 +9,13 @@ This repo contains folders [data](data) which containts the two subfolders:
 ## Files 
 The files found are as follows:
 1. [map_key.py](map_keys.py) - This file is used by the other two programs to create mappings of `dictionary` keys and uses the two `.json` files found in [braarud](data/braarud) and [castaway](data/castaway).
-2. [read_cnv_from_folder.py](read_cnv_from_folder.py) - Script for reading the `.cnv` files found in [braarud](data/braarud). Returns a `dict[str, pd.DataFrame]`. **WARNING:** This may have some issues running on Windows computers as it uses `locale` to change the formatting of `datetime` module to read the `.cnv` files using `seabird` module.
+2. [read_cnv_from_folder.py](read_cnv_from_folder.py) - Script for reading the `.cnv` files found in [braarud](data/braarud). Returns a `dict[str, pd.DataFrame]`. 
 4. [read_csv_from_folder.py](read_csv_from_folder.py) - Script for reading the `.cnv` files found in [castaway](data/castaway). Returns a `dict[str, pd.DataFrame]`.
 
 ## Usage of the files:
 The following imports are used: 
 **WARNING:** `read_cnv_from_folder` uses [Seabird](https://seabird.readthedocs.io/en/latest/install.html) to read the `.cnv` files and is required to be installed.
+The packages missing can be installed using `pip install <package`. 
 
 ``` 
 # -- Imports --
@@ -30,10 +31,18 @@ After that you can run this code to read the files:
 
 ```
 # -- Variables -- 
+# Linux-users
 folder_braarud = "./data/braarud/"
 folder_castaway = "./data/castaway/"
 braarud_map = "./data/braarud/map.json"
 castaway_map = "./data/castaway/map_castaway.json"
+
+# Windows-users
+folder_braarud = ".\\data\\braarud\\"
+folder_castaway = ".\\data\\castaway\\"
+braarud_map = ".\\data\\braarud\\map.json"
+castaway_map = ".\\data\\castaway\\map_castaway.json"
+
 
 # -- List of keys --
 seabird_keys: List[str]
